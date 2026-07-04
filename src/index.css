@@ -1,0 +1,74 @@
+/* =========================================================
+   DataForge — Design Tokens
+   A "data console" aesthetic: deep graphite surfaces, a
+   monospace utility face for numbers/labels, teal as the
+   primary working accent, amber reserved for aggregation
+   results, red reserved for destructive/filter-alert states.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Color */
+  --bg-deep: #10141a;
+  --bg-surface: #171d25;
+  --bg-raised: #1f2731;
+  --bg-inset: #0d1116;
+  --border-soft: #2a3440;
+  --border-strong: #3a4653;
+
+  --text-primary: #e7ebf0;
+  --text-secondary: #9aa7b6;
+  --text-faint: #5f6b78;
+
+  --accent-teal: #3fd0c9;
+  --accent-teal-dim: #1f5b57;
+  --accent-amber: #f2b84b;
+  --accent-amber-dim: #6b5326;
+  --accent-red: #f2716d;
+  --accent-red-dim: #5c2c2a;
+
+  /* Type */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-panel: 0 1px 0 rgba(255,255,255,0.02) inset, 0 8px 24px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-inset); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-teal-dim); }
+
+button, select, input {
+  font-family: var(--font-body);
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+a { color: var(--accent-teal); }
+
+.mono { font-family: var(--font-mono); }
